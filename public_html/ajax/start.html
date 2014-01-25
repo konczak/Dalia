@@ -11,16 +11,19 @@
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="./img/carousel/tapeta1.jpg" alt="Tapeta1">
+                    <img src="./img/carousel/tapety.png" alt="Tapety">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Lorem ipsum dolor sit amet. </h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis euismod nibh. Duis commodo nibh ac arcu posuere ultricies. Mauris laoreet justo et blandit porta. </p>
+                            <h1>Tapety</h1>
+                            <p>Potrzebujesz położyć tapety na ściany? Pomalować? Może odnowić wnętrze?
+                                <br>W Naszej ofercie znajdziesz coś dla siebie</p>
                             <p>
                                 <a class="btn btn-lg btn-primary" role="button" onclick="daliaAppViewModel.goToPage('Tapety');">
                                     Dowiedz się więcej »
@@ -30,11 +33,11 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="./img/carousel/tapeta2.jpg" alt="Tapeta2">
+                    <img src="./img/carousel/recycle.png" alt="Recykling">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Lorem ipsum dolor sit amet. </h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis euismod nibh. Duis commodo nibh ac arcu posuere ultricies. Mauris laoreet justo et blandit porta. </p>
+                            <h1>Recykling</h1>
+                            <p>Jeżeli posiadasz zbędny surowiec wtórny to z nami możesz możesz pomóc chronić środowisko</p>
                             <p>
                                 <a class="btn btn-lg btn-primary" role="button" onclick="daliaAppViewModel.goToPage('Recykling');">
                                     Dowiedz się więcej »
@@ -44,14 +47,42 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="./img/carousel/tapeta3.jpg" alt="Tapeta3">
+                    <img src="./img/carousel/galeria.png" alt="Galeria">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Lorem ipsum dolor sit amet. </h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis euismod nibh. Duis commodo nibh ac arcu posuere ultricies. Mauris laoreet justo et blandit porta. </p>
+                            <h1>Galeria</h1>
+                            <p>Zobacz Nasze sklepy na zdjęciach</p>
                             <p>
-                                <a class="btn btn-lg btn-primary" role="button" href="#">
-                                    Learn more »
+                                <a class="btn btn-lg btn-primary" role="button" onclick="daliaAppViewModel.goToPage('Galeria');">
+                                    Dowiedz się więcej »
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/about_us.png" alt="O Nas">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>O Nas</h1>
+                            <p>Informacje o firmie - w tym również rys historyczny</p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" role="button" onclick="daliaAppViewModel.goToPage('O Nas');">
+                                    Dowiedz się więcej »
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/contact.png" alt="Kontakt">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Kontakt</h1>
+                            <p>Kontakt telefoniczny i mailowy do poszczególnych oddziałów oraz mapy dojazdu</p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" role="button" onclick="daliaAppViewModel.goToPage('Kontakt');">
+                                    Dowiedz się więcej »
                                 </a>
                             </p>
                         </div>
@@ -69,7 +100,7 @@
         </div>
         <script>
             $('.carousel').carousel({
-                interval: 4000
+                interval: 5000
             });
         </script>
     </body>

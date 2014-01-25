@@ -10,3 +10,21 @@ footer {
     margin: 100px 0;
     text-align: center;
 }
+
+#ajaxDiv {
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.carousel {
+    border-radius: 25px;
+}
+
+.carousel .carousel-inner{
+    border-radius: 25px;
+}
+
+.carousel a.carousel-control {
+    border-radius: 25px;
+}
