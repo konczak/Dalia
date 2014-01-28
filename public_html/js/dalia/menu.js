@@ -7,7 +7,6 @@ function AppViewModel() {
         {title: 'Tapety', url: 'tapety'},
         {title: 'Recykling', url: 'recykling'},
         {title: 'Galeria', url: 'galeria'},
-        {title: 'O Nas', url: 'oNas'},
         {title: 'Kontakt', url: 'kontakt'}
     ]);
 
