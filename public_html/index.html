@@ -29,10 +29,14 @@
         <script src="./js/jquery-1.10.2/jquery.js"></script>
         <script src="./js/knockout-3.0.0/knockout.js"></script>
         <script src="./js/bootstrap-3.0.3/bootstrap.js"></script>
+
+        <link href="./css/spectrum.css" rel="stylesheet">
+        <script src="./js/spectrum-colorpicker-1.2.0/spectrum.js"></script>
     </head>
 
     <body>
-
+        <input type='text' class="basic"/>
+        <em id='basic-log'></em>
         <div class="container">
 
             <div class="masthead">
@@ -50,7 +54,7 @@
                 <img src="img/ajax-loader.gif">
             </div>
             <div id="ajaxDiv">
-                
+
             </div>
 
         </div>
@@ -61,6 +65,10 @@
                     F.H. DALIA
                 </p>
                 <ul class="list-inline">
+                    <li>
+                        <a href="mailto:daliafh@poczta.onet.pl">daliafh@poczta.onet.pl</a>
+                    </li>
+                    <li>-</li>
                     <li>
                         <a href="mailto:daliareda@wp.pl">daliareda@wp.pl</a>
                     </li>
@@ -77,5 +85,17 @@
 
         <script src="./js/dalia/ajaxLoader.js"></script>
         <script src="./js/dalia/menu.js"></script>
+        <script>
+            $(".basic").spectrum({
+                color: "#f00",
+                change: function(color) {
+                    $("#basic-log")
+                            .text("wybrany kolor (skopiuj): " + color.toHexString())
+                            .css('background-color', "black")
+                            .css('color', "white");
+                    $("body").css('background-color', color.toHexString());
+                }
+            });
+        </script>
     </body>
 </html>
