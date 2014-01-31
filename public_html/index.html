@@ -35,12 +35,29 @@
     </head>
 
     <body>
-        <input type='text' class="basic"/>
-        <em id='basic-log'></em>
+<!--        <input type='text' class="basic"/>
+        <em id='basic-log'></em>-->
+        <div class="bee">
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked onchange="zmiana(1);">
+                    PEŁNE
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" onchange="zmiana(2);">
+                    PRZEZROCZYSTE
+                </label>
+            </div>
+        </div>
+        <div class="daliaBackground backgroundSolid"></div>
         <div class="container">
+            <img class="logo" src="./img/dalia_logo.png">
+            <img class="logo" src="./img/recycle_logo.png">
+
 
             <div class="masthead">
-                <img src="./img/dalia_logo.png">
                 <ul class="nav nav-justified" data-bind="foreach: menuObjects">
                     <li data-bind="value: url,
                         css: {active: url == $root.activePage()}">
@@ -58,6 +75,7 @@
             </div>
 
         </div>
+
         <footer>
             <div class="container text-left">
 
@@ -86,16 +104,25 @@
         <script src="./js/dalia/ajaxLoader.js"></script>
         <script src="./js/dalia/menu.js"></script>
         <script>
-            $(".basic").spectrum({
-                color: "#f00",
-                change: function(color) {
-                    $("#basic-log")
-                            .text("wybrany kolor (skopiuj): " + color.toHexString())
-                            .css('background-color', "black")
-                            .css('color', "white");
-                    $("body").css('background-color', color.toHexString());
+            function zmiana(wybrany) {
+                if (wybrany === 1) {
+                    $("div.daliaBackground").removeClass("backgroundTransparent");
+                    $("div.daliaBackground").addClass("backgroundSolid");
+                } else {
+                    $("div.daliaBackground").removeClass("backgroundSolid");
+                    $("div.daliaBackground").addClass("backgroundTransparent");
                 }
-            });
+            }
+//             $(".basic").spectrum({
+//                color: "#f00",
+//                change: function(color) {
+//                    $("#basic-log")
+//                            .text("wybrany kolor (skopiuj): " + color.toHexString())
+//                            .css('background-color', "black")
+//                            .css('color', "white");
+//                    $("body").css('background-color', color.toHexString());
+//                }
+//                });
         </script>
     </body>
 </html>
