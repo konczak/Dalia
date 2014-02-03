@@ -29,46 +29,27 @@
         <script src="./js/jquery-1.10.2/jquery.js"></script>
         <script src="./js/knockout-3.0.0/knockout.js"></script>
         <script src="./js/bootstrap-3.0.3/bootstrap.js"></script>
-
-        <link href="./css/spectrum.css" rel="stylesheet">
-        <script src="./js/spectrum-colorpicker-1.2.0/spectrum.js"></script>
     </head>
 
     <body>
-<!--        <input type='text' class="basic"/>
-        <em id='basic-log'></em>-->
-        <div class="bee">
-            <div class="radio-inline">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked onchange="zmiana(1);">
-                    PEŁNE
-                </label>
-            </div>
-            <div class="radio-inline">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" onchange="zmiana(2);">
-                    PRZEZROCZYSTE
-                </label>
-            </div>
-        </div>
-        <div class="daliaBackground backgroundSolid"></div>
+        <div class="daliaBackground backgroundTransparent"></div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                     <img class="logo" src="./img/dalia_logo.png">
                 </div>
-                <div class="col-sm-1 col-sm-offset-8 hidden-xs">
-                    <img class="logo" src="./img/recycle_logo.png">
+                <div class="col-sm-3 col-sm-offset-6 hidden-xs text-right">
+                    <img src="./img/recycle_logo.png">
+                    <img src="./img/recycle_logo.png">
+                    <img src="./img/recycle_logo.png">
                 </div>
             </div>
 
 
             <div class="masthead">
                 <ul class="nav nav-justified" data-bind="foreach: menuObjects">
-                    <li data-bind="value: url,
-                        css: {active: url == $root.activePage()}">
-                        <a data-bind="text: title,
-                           click: $root.loadPage"></a>
+                    <li data-bind="value: url, css: {active: url == $root.activePage()}">
+                        <a data-bind="text: title, click: $root.loadPage"></a>
                     </li>
                 </ul>
             </div>
@@ -76,15 +57,12 @@
             <div id="ajaxLoader">
                 <img src="img/ajax-loader.gif">
             </div>
-            <div id="ajaxDiv">
-
-            </div>
+            <div id="ajaxDiv"></div>
 
         </div>
 
         <footer>
             <div class="container text-left">
-
                 <p>
                     F.H. DALIA
                 </p>
@@ -109,26 +87,5 @@
 
         <script src="./js/dalia/ajaxLoader.js"></script>
         <script src="./js/dalia/menu.js"></script>
-        <script>
-            function zmiana(wybrany) {
-                if (wybrany === 1) {
-                    $("div.daliaBackground").removeClass("backgroundTransparent");
-                    $("div.daliaBackground").addClass("backgroundSolid");
-                } else {
-                    $("div.daliaBackground").removeClass("backgroundSolid");
-                    $("div.daliaBackground").addClass("backgroundTransparent");
-                }
-            }
-//             $(".basic").spectrum({
-//                color: "#f00",
-//                change: function(color) {
-//                    $("#basic-log")
-//                            .text("wybrany kolor (skopiuj): " + color.toHexString())
-//                            .css('background-color', "black")
-//                            .css('color', "white");
-//                    $("body").css('background-color', color.toHexString());
-//                }
-//                });
-        </script>
     </body>
 </html>
